@@ -17,7 +17,7 @@ const Header = () => {
           <h1>Surviving CBC</h1>
         </Link>
          <nav className="text-center">
-          {Auth.loggedIn() ? (
+          {/* {Auth.loggedIn() ? (
             <>
               <Link to="/profile">Me</Link>
               <a href="/" onClick={logout}>
@@ -29,7 +29,7 @@ const Header = () => {
               <Link to="/login">Login</Link>
               <Link to="/signup">Signup</Link>
             </>
-          )}
+          )} */}
         </nav>
       </div>
     </header>
