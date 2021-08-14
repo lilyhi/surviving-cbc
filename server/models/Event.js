@@ -17,13 +17,17 @@ const eventSchema = new Schema(
         username: {
             type: String,
             required: true
+        },
+        subject : {
+            type: String,
+            required: true
         }
     },
-    // {
-    //     toJSON: {
-    //         getters: true
-    //     }
-    // }
+    {
+        toJSON: {
+            getters: true
+        }
+    }
 );
 
 /// username, datecreated, eventtext
