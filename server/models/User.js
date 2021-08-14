@@ -27,6 +27,12 @@ const userSchema = new Schema(
         type: Schema.Types.ObjectId,
         ref: 'Post'
       }
+    ], 
+    events: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Event'
+      }
     ]
   },
   // {
