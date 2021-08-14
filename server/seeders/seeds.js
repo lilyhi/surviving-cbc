@@ -6,6 +6,7 @@ const { Post, User, Event } = require('../models');
 db.once('open', async () => {
   await Post.deleteMany({});
   await User.deleteMany({});
+  await Event.deleteMany({});
 
   // create user data
   const userData = [];
@@ -31,9 +32,9 @@ db.once('open', async () => {
     const randomUserIndex = Math.floor(Math.random() * createdUsers.ops.length);
     const { username, _id: userId } = createdUsers.ops[randomUserIndex];
 
-    const subjectList = ["HTML","CSS","JS","JSON","jQuery","Node","Web APIs","Server-Side APIs","Third-Party APIs","MySQL","React","NoSQL","Express.js"];
+    const subjectList = ['HTML','CSS','JS','JSON','jQuery','Node','Web APIs','Server-Side APIs','Third-Party APIs','MySQL','React','NoSQL','Express.js'];
     var randomSubject = subjectList[ Math.floor(Math.random() * subjectList.length)];
-    const subject = {subject: randomSubject}; 
+    const subject = randomSubject; 
     
     const createdPost = await Post.create({ postText, username, subject });
 
@@ -52,9 +53,9 @@ db.once('open', async () => {
     const randomUserIndex = Math.floor(Math.random() * createdUsers.ops.length);
     const { username, _id: userId } = createdUsers.ops[randomUserIndex];
 
-    const subjectList = ["HTML","CSS","JS","JSON","jQuery","Node","Web APIs","Server-Side APIs","Third-Party APIs","MySQL","React","NoSQL","Express.js"];
+    const subjectList = ['HTML','CSS','JS','JSON','jQuery','Node','Web APIs','Server-Side APIs','Third-Party APIs','MySQL','React','NoSQL','Express.js'];
     var randomSubject = subjectList[ Math.floor(Math.random() * subjectList.length)];
-    const subject = {subject: randomSubject}; 
+    const subject = randomSubject; 
 
     const createdEvent = await Event.create({ eventText, username, subject });
 
