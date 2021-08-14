@@ -18,12 +18,16 @@ const postSchema = new Schema(
             type: String,
             required: true
         },
+        subject : {
+          type: String,
+          required: true
+        }
     },
-    // {
-    //     toJSON: {
-    //         getters: true
-    //     }
-    // }
+    {
+        toJSON: {
+            getters: true
+        }
+    }
 );
 
 const Post = model('Post', postSchema);

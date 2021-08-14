@@ -7,7 +7,7 @@ const typeDefs = gql`
     username: String
     email: String
     posts: [Post]
-    event: [Event]
+    events: [Event]
   }
 
   type Post {
@@ -15,6 +15,8 @@ const typeDefs = gql`
     postText: String
     createdAt: String
     username: String
+    title: String
+    subject: String
   }
 
   type Event {
@@ -22,6 +24,7 @@ const typeDefs = gql`
     eventText: String
     createdAt: String
     username: String
+    subject: String
   }
 
   type Auth {
@@ -35,8 +38,7 @@ const typeDefs = gql`
     user(username: String!): User
     posts(username: String): [Post]
     post(_id: ID!): Post
-
-    events(username: String): [Event]
+    events(username: String!): [Event]
     event(_id: ID!): Event
   }
 
@@ -45,6 +47,8 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     addPost(postText: String!): Post
     addEvent(eventText: String!): Event 
+    removePost(postId: ID!): Post
+    removeEvent(eventId: ID!): Event
   }
 `;
 
