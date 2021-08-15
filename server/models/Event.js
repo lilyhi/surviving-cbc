@@ -7,7 +7,7 @@ const eventSchema = new Schema(
             type: String,
             required: 'You need to enter a complete event!',
             minlength: 1,
-            maxlength: 144
+            maxlength: 2000
         },
         createdAt: {
             type: Date,
