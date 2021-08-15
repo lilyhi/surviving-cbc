@@ -6,7 +6,7 @@ const Post = () => {
 
     return (
         <Link to="/">
-            <div className="col-sm-6">
+            <div className="list-group col-sm-6">
                 <div className="card">
                     <h5 className="card-header">Posted by "COOL_USERName69</h5>
                     <div className="card-body">
