@@ -1,10 +1,30 @@
 // When it comes time, integrate Apollo Hooks:
 import { useQuery } from '@apollo/client';
 // import { QUERY_THOUGHTS } from '../utils/queries';
-import React from 'react';
+
+import React, { useState } from 'react';
+import Post from '../components/Post';
+import SubjectButton from '../components/SubjectButton';
 
 const Home = () => {
-
+    const [currentSubject, setCurrentSubject] = useState('')
+    // setCurrentSubject as a prop to that button. and passing it in as a prop.
+    // useState('') want 
+    const subjects = [
+        'HTML',
+        'CSS',
+        'JS',
+        'JSON',
+        'JQuery',
+        'Node',
+        'Web APIs',
+        'Server-Side APIs',
+        'Third-Party APIs',
+        'MySQL',
+        'React',
+        'NoSQL',
+        'Express.js',
+    ]
     return (
         <main>
             {/* nav bar  */}
@@ -29,24 +49,21 @@ const Home = () => {
                     Select A Subject
                 </button>
                 <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <button className="dropdown-item" type="button">HTML</button>
-                    <button className="dropdown-item" type="button">CSS</button>
-                    <button className="dropdown-item" type="button">JS</button>
-                    <button className="dropdown-item" type="button">JSON</button>
-                    <button className="dropdown-item" type="button">JQuery</button>
-                    <button className="dropdown-item" type="button">Node</button>
-                    <button className="dropdown-item" type="button">Web APIs</button>
-                    <button className="dropdown-item" type="button">Server-Side APIs</button>
-                    <button className="dropdown-item" type="button">Third-Party APIs</button>
-                    <button className="dropdown-item" type="button">MySQL</button>
-                    <button className="dropdown-item" type="button">React</button>
-                    <button className="dropdown-item" type="button">NoSQL</button>
-                    <button className="dropdown-item" type="button">Express.js</button>
+                    {subjects.map(subject => (
+                        <SubjectButton subject={subject} clickEvent={setCurrentSubject} />
+                    ))}
 
                 </div>
             </div>
-            {/* Sudo Coding:
-            //Collum 1: Drop down options featuring subject types col-2
+            {
+                currentSubject
+                    ? <Post />
+                    : <div> (included the ':') make another component for the home screen if nothing is clicked </div>
+            }
+                {/* //post.length, post.map reference line 53 above, to add info for two */}
+
+            {/* Sudo Coding: // 
+            
             //Collum 2: Post Section col-5
             -   should have Create Post button
             //Collum 3: Events/Scheduled meet ups. col-5
