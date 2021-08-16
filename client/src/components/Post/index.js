@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// ///////////////////////////////////////          NOT SURE ABOUT LINK. ITS STILL NOT PULLING UP/////////////////////
+
 const Post = () => {
 
 

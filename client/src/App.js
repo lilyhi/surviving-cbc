@@ -5,9 +5,13 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; // go
 import { ApolloClient, InMemoryCache, ApolloProvider, useQuery, gql } from "@apollo/client";
 // import { ApolloProvider } from '@apollo/react-hooks';
 
-import Header from './components/Header';
-import Post from './components/Post';
 import Home from './pages/Home';
+import Header from './components/Header';
+import CreatePostButton from './components/CreatePostButton';
+import Post from './components/Post';
+
+import Event from './components/Event';
+import CreateEventButton from './components/CreateEventButton'
 //import Footer from './components/Footer';
 
 function App() {
@@ -26,7 +30,10 @@ function App() {
             <Switch>
             <Route exact path="/" component={Home} />
             {/* // ///////////////////////////////////////          NOT SURE ABOUT Post. or Switch ITS STILL NOT PULLING UP///////////////////// */}
+            <CreatePostButton />
             <Post />
+            <CreateEventButton />
+            <Event />
             {/*  */}
             </Switch>
 

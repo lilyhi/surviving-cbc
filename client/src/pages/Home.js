@@ -3,8 +3,14 @@ import { useQuery } from '@apollo/client';
 // import { QUERY_THOUGHTS } from '../utils/queries';
 
 import React, { useState } from 'react';
-import Post from '../components/Post';
 import SubjectButton from '../components/SubjectButton';
+
+import CreatePostButton from '../components/CreatePostButton';
+import Post from '../components/Post';
+
+import Event from '../components/Event'
+import CreateEventButton from '../components/CreateEventButton';
+
 
 const Home = () => {
     const [currentSubject, setCurrentSubject] = useState('')
@@ -44,6 +50,9 @@ const Home = () => {
                     </ul>
                 </div>
             </nav>
+
+            {/* DROPW DOWN SUBJECT MENU */}
+        <div className="row justify-content-center">    
             <div className="dropdown">
                 <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Select A Subject
@@ -55,12 +64,33 @@ const Home = () => {
 
                 </div>
             </div>
-            {
-                currentSubject
-                    ? <Post />
-                    : <div> (included the ':') make another component for the home screen if nothing is clicked </div>
-            }
-                {/* //post.length, post.map reference line 53 above, to add info for two */}
+
+            {/* Creating new PostButton */}
+
+            
+                <div className="col-5">
+                    <CreatePostButton />
+                    {
+                        currentSubject
+                            ? <Post />
+                            : <div> (included the ':') make another component for the home screen if nothing is clicked </div>
+
+                    }
+                </div>
+                <div className="col-5">
+                    <CreateEventButton />
+                    {
+                        currentSubject
+                            ? <Event />
+                            : <div> (included the ':') make another component for the home screen if nothing is clicked </div>
+
+                    }
+                </div>
+            </div>
+
+            {/* //post.length, post.map reference line 53 above, to add info for two */}
+
+
 
             {/* Sudo Coding: // 
             
@@ -68,7 +98,7 @@ const Home = () => {
             -   should have Create Post button
             //Collum 3: Events/Scheduled meet ups. col-5
             -   Should have Create even button. */}
-        </main>
+        </main >
     )
 }
 export default Home;
