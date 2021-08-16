@@ -12,7 +12,7 @@ const Event = () => {
                     <div className="card-body">
                         <h5 className="card-title">Join Us for Python Study Hall</h5>
                         <p className="card-text">Discord is link below.</p>
-                        <a href="#" className="btn btn-primary">Click to view Calendar</a>
+                        <a href="#" className="btn btn-primary">Click to view Event</a>
                     </div>
                 </div>
             </div>
