@@ -10,6 +10,8 @@ const CreatePostButton = () => {
                 <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">
                     Create a Post</a>
             </div>
+            <br>
+            </br>
         </Link>
     )
 }

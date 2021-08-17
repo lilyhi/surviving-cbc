@@ -14,7 +14,7 @@ const Header = () => {
     <header className="bg-secondary mb-4 py-2 flex-row align-center">
       <div className="container flex-row justify-space-between-lg align-center">
         <Link to="/">
-          <h1 className="">Surviving CBC</h1>
+          <h1 className="text-center">Surviving CBC</h1>
         </Link>
 {/* https://getbootstrap.com/docs/4.0/utilities/spacing/ */}
         {/* Link to the Suli.js Page Needs to be here

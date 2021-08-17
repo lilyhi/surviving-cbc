@@ -10,6 +10,8 @@ const CreateEventButton = () => {
                 <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">
                     Create An Event</a>
             </div>
+            <br>
+            </br>
         </Link>
     )
 }
