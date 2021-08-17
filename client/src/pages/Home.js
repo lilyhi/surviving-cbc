@@ -39,21 +39,12 @@ const Home = () => {
                     <div className="navbar-header">
                         <a className="navbar-brand" href="#">CBC Helpers</a>
                     </div>
-                    {/* <ul className="nav navbar-nav">
-                        <li className="active"><a href="#">Home</a></li>
-                        <li><a href="#">Page 1</a></li>
-                        <li><a href="#">Page 2</a></li>
-                    </ul> */}
-                    <ul className="nav navbar-nav navbar-right">
-                        <li><a href="#"><span className="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                        <li><a href="#"><span className="glyphicon glyphicon-log-in"></span> Login</a></li>
-                    </ul>
                 </div>
             </nav>
 
             {/* DROPW DOWN SUBJECT MENU */}
         <div className="row justify-content-center">    
-            <div className="dropdown">
+            <div className="dropdown col-sm-2">
                 <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Select A Subject
                 </button>
@@ -67,7 +58,6 @@ const Home = () => {
 
             {/* Creating new PostButton */}
 
-            
                 <div className="col-5">
                     <CreatePostButton />
                     {
@@ -87,17 +77,13 @@ const Home = () => {
                     }
                 </div>
             </div>
+                    {/* Please Keep Notes below--- I want to eventually create a page that prompts up if there is no posts inregards to a subject. */}
+                    
+            {/* //post.length?, post.map reference: 
+            {subjects.map(subject => (
+                        <SubjectButton subject={subject} clickEvent={setCurrentSubject} /
+                        , to add info for two */}
 
-            {/* //post.length, post.map reference line 53 above, to add info for two */}
-
-
-
-            {/* Sudo Coding: // 
-            
-            //Collum 2: Post Section col-5
-            -   should have Create Post button
-            //Collum 3: Events/Scheduled meet ups. col-5
-            -   Should have Create even button. */}
         </main >
     )
 }

@@ -12,7 +12,8 @@ import Post from './components/Post';
 
 import Event from './components/Event';
 import CreateEventButton from './components/CreateEventButton'
-//import Footer from './components/Footer';
+import Footer from './components/Footer';
+
 
 function App() {
 
@@ -29,14 +30,12 @@ function App() {
           <div className="Container">
             <Switch>
             <Route exact path="/" component={Home} />
-            {/* // ///////////////////////////////////////          NOT SURE ABOUT Post. or Switch ITS STILL NOT PULLING UP///////////////////// */}
             <CreatePostButton />
             <Post />
             <CreateEventButton />
             <Event />
-            {/*  */}
             </Switch>
-
+            <Footer />
           </div>
         </div>
       </Router>
