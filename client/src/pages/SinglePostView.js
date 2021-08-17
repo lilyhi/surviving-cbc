@@ -6,7 +6,7 @@ function SinglePostView() {
     return (
         <Container>
 
-            <Card>
+            <Card style={{ width: '50%', margin: '0 auto' }}>
                 <Card.Title>
                     <h3>This is the post's title</h3>
                     <h4 className='text-right'>username, 8/16/2021, 12:47 AM</h4>
