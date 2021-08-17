@@ -12,7 +12,7 @@ const Post = () => {
                     <div className="card-body">
                         <h5 className="card-title">JS Notes From my CBC days</h5>
                         <p className="card-text">When in Doubt Always keep notes.</p>
-                        <a href="#" className="btn btn-primary">Click to View more</a>
+                        <a href="#" className="btn btn-secondary btn-sm">View whole Post</a>
                     </div>
                 </div>
             </div>
