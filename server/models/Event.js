@@ -7,7 +7,7 @@ const eventSchema = new Schema(
             type: String,
             required: 'You need to enter a complete event!',
             minlength: 1,
-            maxlength: 144
+            maxlength: 2000
         },
         createdAt: {
             type: Date,
@@ -17,13 +17,17 @@ const eventSchema = new Schema(
         username: {
             type: String,
             required: true
+        },
+        subject : {
+            type: String,
+            required: true
         }
     },
-    // {
-    //     toJSON: {
-    //         getters: true
-    //     }
-    // }
+    {
+        toJSON: {
+            getters: true
+        }
+    }
 );
 
 /// username, datecreated, eventtext

@@ -1,19 +1,20 @@
 // import all components into the landing page here.
 import React from 'react';
-import { render } from 'react-dom';
+
+import Header from './components/Header';
+import Home from './pages/Home';
+import Suli from "./pages/Suli";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; // going to add Switch later
 import { ApolloClient, InMemoryCache, ApolloProvider, useQuery, gql } from "@apollo/client";
 // import { ApolloProvider } from '@apollo/react-hooks';
 
-import Home from './pages/Home';
-import Header from './components/Header';
-import CreatePostButton from './components/CreatePostButton';
-import Post from './components/Post';
 
-import Event from './components/Event';
-import CreateEventButton from './components/CreateEventButton'
+// import CreatePostButton from './components/CreatePostButton';
+// import Post from './components/Post';
+
+// import Event from './components/Event';
+// import CreateEventButton from './components/CreateEventButton'
 import Footer from './components/Footer';
-
 
 function App() {
 
@@ -25,19 +26,35 @@ function App() {
   return (
     <ApolloProvider client={client} >
       <Router>
-        <div className="App container">
-          <Header />
-          <div className="Container">
-            <Switch>
-            <Route exact path="/" component={Home} />
-            <CreatePostButton />
-            <Post />
-            <CreateEventButton />
-            <Event />
-            </Switch>
-            <Footer />
-          </div>
-        </div>
+        <Header />
+
+        <Switch>
+          <Route exact path='/'>
+            <Home />
+          </Route>
+
+          <Route path='/home' exact>
+            <Home />
+          </Route>
+
+          <Route path='/signup' exact>
+            <Suli />
+          </Route>
+
+          <Route path='/login' exact>
+            <Suli />
+          </Route>
+
+          <Route path='/register' exact>
+            <Suli />
+          </Route>
+
+          <Route path='/iwillsurvive' exact>
+            <Suli />
+          </Route>
+
+        </Switch>
+        <Footer />
       </Router>
     </ApolloProvider>
   );
