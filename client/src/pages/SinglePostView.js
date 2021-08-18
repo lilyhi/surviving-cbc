@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_POST } from '../utils/queries';
