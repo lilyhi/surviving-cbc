@@ -65,6 +65,14 @@ function App() {
                         <Suli />
                     </Route>
 
+                    <Route path='/singlepost' exact>
+                        <SinglePost />
+                    </Route>
+
+                    <Route path='/singleevent' exact>
+                        <SingleEvent />
+                    </Route>
+
                 </Switch>
                 <Footer />
             </Router>
