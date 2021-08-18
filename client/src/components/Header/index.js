@@ -10,30 +10,22 @@ const Header = () => {
     //   Auth.logout();
     // };
 
-    return (
-        <header className="bg-secondary mb-4 py-2 flex-row align-center">
-            <div className="container flex-row justify-space-between-lg justify-center align-center">
-                <Link to="/">
-                    <h1>Surviving CBC</h1>
-                </Link>
-                <nav className="text-center">
-                    {/* {Auth.loggedIn() ? (
-            <>
-              <Link to="/profile">Me</Link>
-              <a href="/" onClick={logout}>
-                Logout
-              </a>
-            </>
-          ) : (
-            <>
-              <Link to="/login">Login</Link>
-              <Link to="/signup">Signup</Link>
-            </>
-          )} */}
-                </nav>
-            </div>
-        </header>
-    );
+  return (
+    <header className="bg-secondary mb-4 py-2 flex-row align-center">
+      <div className="container flex-row justify-space-between-lg align-center">
+        <Link to="/">
+          <h1 className="text-center">Surviving CBC</h1>
+        </Link>
+{/* https://getbootstrap.com/docs/4.0/utilities/spacing/ */}
+        {/* Link to the Suli.js Page Needs to be here
+        <Link to="/Suli.js"> */}
+          <p><a href="#"><span className="glyphicon glyphicon-user"></span> SignUp </a>
+            <a href="#"><span className="glyphicon glyphicon-log-in"></span> Login </a>
+          </p>
+
+      </div>
+    </header>
+  );
 };
 
 export default Header;

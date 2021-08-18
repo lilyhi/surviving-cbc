@@ -11,8 +11,8 @@ const Event = () => {
                     <h5 className="card-header"> Posted by 2KoOl4ScHoOl </h5>
                     <div className="card-body">
                         <h5 className="card-title">Join Us for Python Study Hall</h5>
-                        <p className="card-text">Discord is link below.</p>
-                        <a href="#" className="btn btn-secondary btn-sm">Click to view Event</a>
+                        <p className="card-text">Discord is link below....</p>
+                        <a href="#" className="btn btn-secondary btn-sm">View Event</a>
                     </div>
                 </div>
             </div>

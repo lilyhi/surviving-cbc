@@ -9,49 +9,54 @@ import { ApolloClient, InMemoryCache, ApolloProvider, useQuery, gql } from "@apo
 // import { ApolloProvider } from '@apollo/react-hooks';
 
 
-//import Footer from './components/Footer';
+// import CreatePostButton from './components/CreatePostButton';
+// import Post from './components/Post';
+
+// import Event from './components/Event';
+// import CreateEventButton from './components/CreateEventButton'
+import Footer from './components/Footer';
 
 function App() {
 
-    const client = new ApolloClient({
-        uri: 'https://48p1r2roz4.sse.codesandbox.io',
-        cache: new InMemoryCache()
-    });
+  const client = new ApolloClient({
+    uri: 'https://48p1r2roz4.sse.codesandbox.io',
+    cache: new InMemoryCache()
+  });
 
-    return (
-        <ApolloProvider client={client} >
-            <Router>
-                <Header />
+  return (
+    <ApolloProvider client={client} >
+      <Router>
+        <Header />
 
-                <Switch>
-                    <Route exact path='/'>
-                        <Home />
-                    </Route>
+        <Switch>
+          <Route exact path='/'>
+            <Home />
+          </Route>
 
-                    <Route path='/home' exact>
-                        <Home />
-                    </Route>
+          <Route path='/home' exact>
+            <Home />
+          </Route>
 
-                    <Route path='/signup' exact>
-                        <Suli />
-                    </Route>
+          <Route path='/signup' exact>
+            <Suli />
+          </Route>
 
-                    <Route path='/login' exact>
-                        <Suli />
-                    </Route>
+          <Route path='/login' exact>
+            <Suli />
+          </Route>
 
-                    <Route path='/register' exact>
-                        <Suli />
-                    </Route>
+          <Route path='/register' exact>
+            <Suli />
+          </Route>
 
-                    <Route path='/iwillsurvive' exact>
-                        <Suli />
-                    </Route>
+          <Route path='/iwillsurvive' exact>
+            <Suli />
+          </Route>
 
-                </Switch>
-
-            </Router>
-        </ApolloProvider>
-    );
+        </Switch>
+        <Footer />
+      </Router>
+    </ApolloProvider>
+  );
 }
 export default App;
