@@ -13,15 +13,24 @@ import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 
 function Suli() {
-    const [formState, setFormState] = useState({ username: '', email: '', password: '' });
+    const [formStateAdd, setFormStateAdd, formStateLogin, setFormStateLogin] = useState({ username: '', email: '', password: '' });
     const [addUser, { errorAdd }] = useMutation(ADD_USER);
     const [login, { errorLogin }] = useMutation(LOGIN_USER);
 
-    const handleChange = event => {
+    const handleChangeAdd = event => {
         const { name, value } = event.target;
 
-        setFormState({
-            ...formState,
+        setFormStateAdd({
+            ...formStateAdd,
+            [name]: value
+        });
+    };
+
+    const handleChangeLogin = event => {
+        const { name, value } = event.target;
+
+        setFormStateLogin({
+            ...formStateLogin,
             [name]: value
         });
     };
@@ -32,7 +41,7 @@ function Suli() {
 
         try {
             const { data } = await addUser({
-                variables: { ...formState }
+                variables: { ...formStateAdd }
             });
 
             Auth.login(data.addUser.token);
@@ -47,7 +56,7 @@ function Suli() {
 
         try {
             const { data } = await login({
-                variables: { ...formState }
+                variables: { ...formStateLogin }
             });
 
             Auth.login(data.login.token);
@@ -56,7 +65,7 @@ function Suli() {
         }
 
         // clear form values
-        setFormState({
+        setFormStateAdd({
             email: '',
             password: ''
         });
@@ -76,7 +85,7 @@ function Suli() {
 
                                 <Form.Group className="mb-3" controlId="formBasicUsername">
                                     <Form.Label>Username</Form.Label>
-                                    <Form.Control className="form-input" name="username" id="usernameAdd" type="text" placeholder="Enter username" />
+                                    <Form.Control className="form-input" name="username" id="usernameAdd" type="text" placeholder="Enter username" onChange={handleChangeAdd} value={formStateAdd.username} />
                                     <Form.Text className="text-muted">
                                         What can we call you, survivor?
                                     </Form.Text>
@@ -84,7 +93,7 @@ function Suli() {
 
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>Email</Form.Label>
-                                    <Form.Control className="form-input" name="email" id="emailAdd" type="email" placeholder="Enter email" />
+                                    <Form.Control className="form-input" name="email" id="emailAdd" type="email" placeholder="Enter email" onChange={handleChangeAdd} value={formStateAdd.email} />
                                     <Form.Text className="text-muted">
                                         Please enter your email address.
                                     </Form.Text>
@@ -92,7 +101,7 @@ function Suli() {
 
                                 <Form.Group className="mb-3" controlId="formBasicPassword">
                                     <Form.Label>Password:</Form.Label>
-                                    <Form.Control className="form-input" name="password" id="passwordAdd" type="password" placeholder="Password" />
+                                    <Form.Control className="form-input" name="password" id="passwordAdd" type="password" placeholder="Password" onChange={handleChangeAdd} value={formStateAdd.password} />
                                 </Form.Group>
 
                                 <Button className="btn d-block w-100" variant="primary" type="submit">
@@ -112,10 +121,10 @@ function Suli() {
                         </Card.Title>
 
                         <Card.Body>
-                            <Form>
+                            <Form onSubmit={handleFormSubmitLogin}>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>Username</Form.Label>
-                                    <Form.Control className="form-input" name="username" id="usernameLogin" type="username" placeholder="Enter username" />
+                                    <Form.Control className="form-input" name="username" id="usernameLogin" type="username" placeholder="Enter username" onChange={handleChangeLogin} value={formStateLogin.password} />
                                     <Form.Text className="text-muted">
                                         Welcome back, Survivor
                                     </Form.Text>
@@ -123,7 +132,7 @@ function Suli() {
 
                                 <Form.Group className="mb-3" controlId="formBasicPassword">
                                     <Form.Label>Password:</Form.Label>
-                                    <Form.Control className="form-input" name="password" id="passwordLogin" type="password" placeholder="Password" />
+                                    <Form.Control className="form-input" name="password" id="passwordLogin" type="password" placeholder="Password" onChange={handleChangeLogin} value={formStateLogin.password} />
                                 </Form.Group>
 
                                 <Button className="btn d-block w-100" variant="primary" type="submit">
