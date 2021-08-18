@@ -10,6 +10,7 @@ import Post from '../components/Post';
 
 import Event from '../components/Event'
 import CreateEventButton from '../components/CreateEventButton';
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -17,19 +18,19 @@ const Home = () => {
     // setCurrentSubject as a prop to that button. and passing it in as a prop.
     // useState('') want 
     const subjects = [
-        'HTML',
-        'CSS',
-        'JS',
-        'JSON',
-        'JQuery',
-        'Node',
-        'Web APIs',
-        'Server-Side APIs',
-        'Third-Party APIs',
-        'MySQL',
-        'React',
-        'NoSQL',
-        'Express.js',
+        {name: 'HTML', key:1},
+        {name: 'CSS', key:2},
+        {name: 'JS', key:3},
+        {name: 'JSON', key:4},
+        {name: 'JQuery', key:5},
+        {name: 'Node', key:6},
+        {name: 'Web APIs', key:7},
+        {name: 'Server-Side APIs', key:8},
+        {name: 'Third-Party APIs', key:9},
+        {name: 'MySQL', key:10},
+        {name: 'React', key:11},
+        {name: 'NoSQL', key:12},
+        {name: 'Express.js', key:13}
     ]
     return (
         <main>
@@ -37,7 +38,7 @@ const Home = () => {
             <nav className="navbar navbar-inverse">
                 <div className="container-fluid">
                     <div className="navbar-header">
-                        <a className="navbar-brand" href="#">CBC Helpers</a>
+                        <Link to="/" className="navbar-brand" href="#">CBC Helpers</Link>
                     </div>
                 </div>
             </nav>
@@ -50,7 +51,7 @@ const Home = () => {
                 </button>
                 <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
                     {subjects.map(subject => (
-                        <SubjectButton subject={subject} clickEvent={setCurrentSubject} />
+                        <SubjectButton key={subject.key} subject={subject.name} clickEvent={setCurrentSubject} />
                     ))}
 
                 </div>

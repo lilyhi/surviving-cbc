@@ -19,8 +19,9 @@ const Header = () => {
 {/* https://getbootstrap.com/docs/4.0/utilities/spacing/ */}
         {/* Link to the Suli.js Page Needs to be here
         <Link to="/Suli.js"> */}
-          <p><a href="#"><span className="glyphicon glyphicon-user"></span> SignUp </a>
-            <a href="#"><span className="glyphicon glyphicon-log-in"></span> Login </a>
+          <p>
+            <Link to="/"><span className="glyphicon glyphicon-user"></span> SignUp </Link>
+            <Link to="/"><span className="glyphicon glyphicon-log-in"></span> Login </Link>
           </p>
 
       </div>
