@@ -1,8 +1,8 @@
 // import all components into the landing page here.
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { InMemoryCache, createHttpLink, useQuery, gql } from "@apollo/client";
-import ApolloClient from 'apollo-boost';
+import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink, useQuery, gql } from "@apollo/client";
+// import ApolloClient from 'apollo-boost';
 // import { ApolloProvider } from '@apollo/react-hooks';
 
 import Header from './components/Header';
@@ -73,6 +73,8 @@ function App() {
                     <Route path='/event/:id' exact>
                         <SingleEvent />
                     </Route>
+
+                    <Route component={NoMatch} />
 
                 </Switch>
 
