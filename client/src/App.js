@@ -37,6 +37,7 @@ function App() {
 
     return (
         <ApolloProvider client={client} >
+
             <Router>
                 <Header />
 
@@ -65,17 +66,19 @@ function App() {
                         <Suli />
                     </Route>
 
-                    <Route path='/singlepost' exact>
+                    <Route path='/post/:id' exact>
                         <SinglePost />
                     </Route>
 
-                    <Route path='/singleevent' exact>
+                    <Route path='/event/:id' exact>
                         <SingleEvent />
                     </Route>
 
                 </Switch>
+
                 <Footer />
             </Router>
+
         </ApolloProvider>
     );
 }

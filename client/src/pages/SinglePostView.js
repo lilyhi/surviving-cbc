@@ -1,22 +1,35 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-
+import { useParams } from 'react-router-dom';
+import { useQuery } from '@apollo/client';
+import { QUERY_POST } from '../utils/queries';
 
 function SinglePostView() {
+    const { id: postId } = useParams();
+
+    const { loading, data } = useQuery(QUERY_POST, {
+        variables: { id: postId }
+    });
+
+    const post = data?.post || {};
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
     return (
         <Container>
 
-            <Card style={{ width: '50%', margin: '0 auto' }}>
-                <Card.Title style={{ padding: '10px' }}>
-                    <h3>This is the post's title</h3>
-                    <h4 className='text-right'>username, 8/16/2021, 12:47 AM</h4>
+            <Card>
+                <Card.Title>
+                    <h3>{post.subject}</h3>
+                    <h4 className='text-right'>{post.username}, {post.createdAt}</h4>
                 </Card.Title>
 
                 <Card.Body>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        {post.postText}
                     </p>
                 </Card.Body>
 
