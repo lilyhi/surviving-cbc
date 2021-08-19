@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="footer mt-5" style={{ width: '100%', backgroundColor: '#F75F1C', padding: "0 48px" }}>
             <footer className="">
                 <Row>
-                    <h3 className="" style={{ textAlign: 'center', fontFamily: "'Lato', sans-serif", padding: "24px", fontWeight: 'bold' }}>Surviving CBC wants your feedback! Suggestions, comments, concerns, and questions can be sent to the creators of Surviving CBC using the links below.</h3>
+                    <h3 className="" style={{ textAlign: 'center', fontFamily: "'Lato', sans-serif", padding: "24px", fontWeight: 'bold' }}>Surviving<span style={{ fontSize: '3REM', fontWeight: 'bold', color: 'green' }}>+</span>CBC wants your feedback! Suggestions, comments, concerns, and questions can be sent to the creators of Surviving CBC using the links below.</h3>
                 </Row>
                 <h4 className="" style={{ textAlign: 'center', fontFamily: "'Lato', sans-serif", padding: '12px', fontWeight: 'bold' }}>Made with ❤️️ by the original four SCBC Survivors!</h4>
 

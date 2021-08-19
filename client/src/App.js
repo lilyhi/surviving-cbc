@@ -9,9 +9,9 @@ import { setContext } from '@apollo/client/link/context';
 
 import Header from './components/Header';
 import Home from './pages/Home';
-import Signup from "./pages/Signup.js";
-import Login from "./pages/Login.js";
-import NoMatch from './pages/NoMatch';
+// import Signup from "./pages/Signup.js";
+// import Login from "./pages/Login.js";
+// import NoMatch from './pages/NoMatch';
 // import SinglePost from './pages/SinglePostView';
 // import SingleEvent from './pages/SingleEventView';
 import Footer from './components/Footer';
@@ -54,7 +54,7 @@ function App() {
                         <Home />
                     </Route>
 
-                    <Route path='/login' exact>
+                    {/* <Route path='/login' exact>
                         <Login />
                     </Route>
 
@@ -70,7 +70,7 @@ function App() {
                         <Signup />
                     </Route>
 
-                    <Route component={NoMatch} />
+                    <Route component={NoMatch} /> */}
 
                 </Switch>
 
