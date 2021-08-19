@@ -1,6 +1,7 @@
 import { gql } from '@apollo/client';
 //import gql from 'graphql-tag';
 
+//many posts
 export const QUERY_POSTS = gql`
   query posts($username: String) {
     posts(username: $username) {
@@ -13,7 +14,7 @@ export const QUERY_POSTS = gql`
     }
   }
 `;
-
+// single
 export const QUERY_POST = gql`
   query post($id: ID!) {
     post(_id: $id) {
@@ -28,7 +29,7 @@ export const QUERY_POST = gql`
 `;
 
 export const QUERY_EVENTS = gql`
-  query events($username: String) {
+  query events($username: String!) {
     events(username: $username) {
       _id
       eventText
@@ -72,20 +73,19 @@ export const QUERY_USER = gql`
 `;
 
 export const QUERY_ME = gql`
-  {
-    me {
-      _id
-      username
-      email
-      posts {
-        _id
-        postText
-        createdAt
-      events {
-        _id
-        eventText
-        createdAt
-      }
-    }
+query me {
+  _id
+  username
+  email
+  posts {
+    _id
+    postText
+    createdAt
   }
+  events {
+    _id
+    eventText
+    createdAt
+  }
+}
 `;
