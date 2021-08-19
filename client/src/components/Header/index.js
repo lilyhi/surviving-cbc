@@ -14,7 +14,9 @@ const Header = () => {
     // };
 
     return (
-        <Navbar fluid class='navbar navbar-collapse' style={{ backgroundColor: 'black', display: 'flex', flexWrap: 'wrap', flexDirection: 'row', justifyContent: 'center', padding: '36px 0' }}>
+        <Navbar fluid class='navbar navbar-collapse' style={{
+            backgroundColor: 'black', display: 'flex', flexWrap: 'wrap', flexDirection: 'row', justifyContent: 'center', padding: '0', marginTop: '-12px'
+        }}>
             <Row>
 
                 <div style={{ display: 'flex', flexWrap: 'wrap', flexDirection: 'row' }}>
@@ -22,10 +24,10 @@ const Header = () => {
                         <Link to="/" style={{ textDecoration: 'none', color: '#F75F1C' }}>Surviving<span style={{ fontSize: '60px', fontWeight: 'bold', color: 'green' }}>+</span>CBC</Link>
                     </h1>
 
-                    <ul style={{ display: 'flex', flexWrap: 'wrap', flexDirection: 'row', alignItems: 'center', listStyleType: 'none' }}>
+                    <ul style={{ display: 'flex', flexWrap: 'wrap', flexDirection: 'row', alignItems: 'center', listStyleType: 'none', marginBottom: '-12px' }}>
 
                         <li>
-                            <Link to="/signup" style={{ textDecoration: 'none', color: '#F75F1C', fontSize: '24px', padding: '12px 24px' }}>Sign Up</Link>
+                            <Link to="/signup" style={{ textDecoration: 'none', color: '#F75F1C', fontSize: '24px', }}>Sign Up</Link>
                         </li>
 
                         <li>
@@ -36,22 +38,6 @@ const Header = () => {
 
             </Row>
         </Navbar >
-
-        // <header className="bg-secondary mb-4 py-2 flex-row align-center">
-        //     <div className="container flex-row justify-space-between-lg align-center">
-        //         <Link to="/">
-        //             <h1 className="text-center">Surviving CBC</h1>
-        //         </Link>
-        //         {/* https://getbootstrap.com/docs/4.0/utilities/spacing/ */}
-        //         {/* Link to the Suli.js Page Needs to be here
-        // <Link to="/Suli.js"> */}
-        //         <p>
-        //             <Link to="/"><span className="glyphicon glyphicon-user"></span> SignUp </Link>
-        //             <Link to="/"><span className="glyphicon glyphicon-log-in"></span> Login </Link>
-        //         </p>
-
-        //     </div>
-        // </header>
     );
 };
 
