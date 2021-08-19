@@ -5,18 +5,18 @@ import Button from 'react-bootstrap/Button';
 
 function SingleEventView() {
     return (
-        <Container>
+        <Container padding='0'>
 
-            <Card style={{ margin: '0 auto', padding: '10px' }}>
+            <Card border="dark" style={{ margin: '0 auto', padding: '8px', borderRadius: '10px', boxShadow: '0 0 10px rgba(0, 0, 0, .8)' }}>
 
-                <Card.Title>
-                    <h4>
-                        I hope the class is sitting down when they see us present Surviving-CBC!
-                    </h4>
+                <Card.Title style={{ padding: '8px' }}>
+                    <h5 style={{ textAlign: 'justify' }}>
+                        I hope the class is sitting down when they see us present Surviving+CBC!
+                    </h5>
                 </Card.Title>
 
                 <Card.Body>
-                    <p className='text-right'>username, 8/17/2021, 11:10 AM</p>
+                    <h6 className='text-right'>username, 8/16/2021, 12:47 AM</h6>
                 </Card.Body>
 
                 <Card.Footer className='text-center'>

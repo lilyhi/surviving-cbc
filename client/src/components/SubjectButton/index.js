@@ -13,7 +13,7 @@ const SubjectButton = ({ clickEvent, subject }) => {
                 alignItems: 'center',
                 justifyContent: 'center',
                 width: '100%',
-                height: '3REM',
+                height: '2.25REM',
                 padding: '.5REM',
                 margin: '6px',
                 backgroundColor: 'green',

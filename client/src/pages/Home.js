@@ -4,6 +4,8 @@ import { useQuery } from '@apollo/client';
 
 import React, { useState } from 'react';
 import SubjectButton from '../components/SubjectButton';
+import Header from '../components/Header/index.js';
+import Footer from '../components/Footer/index.js';
 
 import CreatePostButton from '../components/CreatePostButton';
 import Post from '../components/Post';
@@ -38,17 +40,20 @@ const Home = () => {
     ]
     return (
         <main>
-            <Row>
-                <Col style={{ display: 'flex', flexWrap: 'wrap', flexDirection: 'column', alignItems: 'center', background: 'linear-gradient(to bottom, #808080 50%, #f75f1c 100%', flex: 1, paddingLeft: '6px' }}>
 
-                    <div>
+            <Row style={{ margin: '0', height: 'auto' }}>
+
+
+                <Col style={{ display: 'flex', flexWrap: 'wrap', flexDirection: 'column', alignItems: 'center', height: '100%', background: 'linear-gradient(to bottom, #808080 50%, #f75f1c 100%', flex: 1 }}>
+
+                    <div style={{ padding: '12px 0' }}>
                         {subjects.map(subject => (
-                            <SubjectButton key={subject.key} subject={subject.name} clickEvent={setCurrentSubject} style={{ backgroundColor: 'lightgray' }} />
+                            <SubjectButton key={subject.key} subject={subject.name} clickEvent={setCurrentSubject} />
                         ))}
                     </div>
                 </Col>
 
-                <Col style={{ display: 'flex', flexWrap: 'wrap', flexDirection: 'column', flex: 2, paddingTop: '12px' }}>
+                <Col style={{ display: 'flex', flexWrap: 'wrap', flexDirection: 'column', flex: 2, padding: '24px 0' }}>
                     {/* Creating new PostButton */}
 
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -64,7 +69,7 @@ const Home = () => {
                         <SinglePostView />
                     </div>
                 </Col>
-                <Col style={{ display: 'flex', flexWrap: 'wrap', flexDirection: 'column', flex: 2, paddingTop: '12px' }}>
+                <Col style={{ display: 'flex', flexWrap: 'wrap', flexDirection: 'column', flex: 2, padding: '24px 0' }}>
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <CreateEventButton />
                         {/* {
@@ -86,6 +91,8 @@ const Home = () => {
                         , to add info for two */}
                 </Col>
             </Row>
+
+
         </main >
     )
 }

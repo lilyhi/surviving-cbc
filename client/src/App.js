@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from "@apollo/client";
 import { setContext } from '@apollo/client/link/context';
-
+import './index.css'
 
 // import ApolloClient from 'apollo-boost';
 // import { ApolloProvider } from '@apollo/react-hooks';
@@ -43,6 +43,7 @@ function App() {
         <ApolloProvider client={client} >
 
             <Router>
+
                 <Header />
 
                 <Switch>

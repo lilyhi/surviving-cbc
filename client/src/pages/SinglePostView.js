@@ -6,15 +6,15 @@ import Button from 'react-bootstrap/Button';
 
 function SinglePostView() {
     return (
-        <Container>
+        <Container padding='0'>
 
-            <Card style={{ margin: '0 auto' }}>
-                <Card.Title style={{ padding: '10px' }}>
+            <Card border="dark" style={{ margin: '0 auto', padding: '8px', borderRadius: '10px', boxShadow: '0 0 10px rgba(0, 0, 0, .8)' }}>
+                <Card.Title style={{ padding: '8px' }}>
                     <h3>This is the post's title</h3>
-                    <h4 className='text-right'>username, 8/16/2021, 12:47 AM</h4>
+                    <h6 className='text-right'>username, 8/16/2021, 12:47 AM</h6>
                 </Card.Title>
 
-                <Card.Body>
+                <Card.Body style={{ textAlign: 'justify' }}>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
@@ -30,7 +30,7 @@ function SinglePostView() {
                     </Button>
                 </Card.Footer>
             </Card>
-        </Container>
+        </Container >
     )
 }
 
