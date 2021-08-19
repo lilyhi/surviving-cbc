@@ -1,13 +1,15 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+
 
 function SinglePostView() {
     return (
         <Container>
 
-            <Card>
-                <Card.Title>
+            <Card style={{ width: '50%', margin: '0 auto' }}>
+                <Card.Title style={{ padding: '10px' }}>
                     <h3>This is the post's title</h3>
                     <h4 className='text-right'>username, 8/16/2021, 12:47 AM</h4>
                 </Card.Title>
@@ -19,31 +21,13 @@ function SinglePostView() {
                 </Card.Body>
 
                 <Card.Footer>
-                    <h4>Comments</h4>
+                    <Button className="btn-warning">
+                        Edit
+                    </Button>
 
-                    <Card>
-                        <Card.Body>
-                            <p>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                            </p>
-                        </Card.Body>
-
-                        <Card.Footer>
-                            <h6 className='text-right'>username, 8/16/2021, 1:03 AM</h6>
-                        </Card.Footer>
-                    </Card>
-
-                    <Card>
-                        <Card.Body>
-                            <p>
-                                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                            </p>
-                        </Card.Body>
-
-                        <Card.Footer>
-                            <h6 className='text-right'>username, 8/16/2021, 1:05 AM</h6>
-                        </Card.Footer>
-                    </Card>
+                    <Button className="btn-danger">
+                        Delete
+                    </Button>
                 </Card.Footer>
             </Card>
         </Container>
