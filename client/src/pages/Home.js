@@ -39,7 +39,7 @@ const Home = () => {
     return (
         <main>
             <Row>
-                <Col style={{ display: 'flex', flexWrap: 'wrap', flexDirection: 'column', alignItems: 'center', backgroundColor: 'gray', flex: 1 }}>
+                <Col style={{ display: 'flex', flexWrap: 'wrap', flexDirection: 'column', alignItems: 'center', background: 'linear-gradient(to bottom, #808080 50%, #f75f1c 100%', flex: 1, paddingLeft: '6px' }}>
 
                     <div>
                         {subjects.map(subject => (
@@ -78,7 +78,7 @@ const Home = () => {
                         <SingleEventView />
                     </div>
 
-                    {/* Please Keep Notes below--- I want to eventually create a page that prompts up if there is no posts inregards to a subject. */}
+                    {/* Please Keep Notes below--- I want to eventually create a page that prompts up if there is no posts in regards to a subject. */}
 
                     {/* //post.length?, post.map reference: 
             {subjects.map(subject => (
