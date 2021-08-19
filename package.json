@@ -23,5 +23,11 @@
   "homepage": "https://github.com/lilyhi/surviving-cbc#readme",
   "devDependencies": {
     "concurrently": "^6.2.1"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/styles": "^4.11.4",
+    "react-icons": "^4.2.0"
   }
 }
