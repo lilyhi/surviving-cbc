@@ -1,15 +1,28 @@
 import React from 'react';
 
-const SubjectButton = ({clickEvent, subject}) => {
+const SubjectButton = ({ clickEvent, subject }) => {
 
 
     return (
-        <button 
-            className="dropdown-item"
+        <button
             type="button"
+            style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '100%',
+                height: '3REM',
+                padding: '.5REM',
+                margin: '12px',
+                backgroundColor: 'lightgray',
+                
+
+            }}
             onClick={() => clickEvent(subject)}
         >
-             {subject}
+            {subject}
         </button>
     );
 }

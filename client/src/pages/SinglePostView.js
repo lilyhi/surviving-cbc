@@ -8,7 +8,7 @@ function SinglePostView() {
     return (
         <Container>
 
-            <Card style={{ width: '50%', margin: '0 auto' }}>
+            <Card style={{ margin: '0 auto' }}>
                 <Card.Title style={{ padding: '10px' }}>
                     <h3>This is the post's title</h3>
                     <h4 className='text-right'>username, 8/16/2021, 12:47 AM</h4>
@@ -20,12 +20,12 @@ function SinglePostView() {
                     </p>
                 </Card.Body>
 
-                <Card.Footer>
-                    <Button className="btn-warning">
+                <Card.Footer className='text-center'>
+                    <Button style={{ backgroundColor: '#F75F1C', border: 'none', borderRadius: '10px', margin: '0 12px', width: '7REM' }}>
                         Edit
                     </Button>
 
-                    <Button className="btn-danger">
+                    <Button className="btn-danger" style={{ border: 'none', borderRadius: '10px', margin: '0 12px', width: '7REM' }}>
                         Delete
                     </Button>
                 </Card.Footer>

@@ -7,7 +7,7 @@ function SingleEventView() {
     return (
         <Container>
 
-            <Card style={{ width: '50%', margin: '0 auto', padding: '10px' }}>
+            <Card style={{ margin: '0 auto', padding: '10px' }}>
 
                 <Card.Title>
                     <h4>
@@ -19,12 +19,12 @@ function SingleEventView() {
                     <p className='text-right'>username, 8/17/2021, 11:10 AM</p>
                 </Card.Body>
 
-                <Card.Footer>
-                    <Button className="btn-warning">
+                <Card.Footer className='text-center'>
+                    <Button style={{ backgroundColor: '#F75F1C', border: 'none', borderRadius: '10px', margin: '0 12px', width: '7REM' }}>
                         Edit
                     </Button>
 
-                    <Button className="btn-danger">
+                    <Button className="btn-danger" style={{ border: 'none', borderRadius: '10px', margin: '0 12px', width: '7REM' }}>
                         Delete
                     </Button>
 
