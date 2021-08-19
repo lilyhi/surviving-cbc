@@ -9,9 +9,15 @@ import { setContext } from '@apollo/client/link/context';
 
 import Header from './components/Header';
 import Home from './pages/Home';
+<<<<<<< HEAD
 // import Signup from "./pages/Signup.js";
 // import Login from "./pages/Login.js";
 // import NoMatch from './pages/NoMatch';
+=======
+import Signup from "./pages/Signup.js";
+import Login from "./pages/Login.js";
+import NoMatch from './pages/NoMatch';
+>>>>>>> pablo-footer
 // import SinglePost from './pages/SinglePostView';
 // import SingleEvent from './pages/SingleEventView';
 import Footer from './components/Footer';
