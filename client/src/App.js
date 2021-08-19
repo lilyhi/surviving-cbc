@@ -1,37 +1,39 @@
 // import all components into the landing page here.
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink, useQuery, gql } from "@apollo/client";
+import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from "@apollo/client";
 import { setContext } from '@apollo/client/link/context';
+
+
 // import ApolloClient from 'apollo-boost';
 // import { ApolloProvider } from '@apollo/react-hooks';
 
 import Header from './components/Header';
 import Home from './pages/Home';
-import Suli from "./pages/Suli";
+import Signup from "./pages/Signup.js";
+import Login from "./pages/Login.js";
 import NoMatch from './pages/NoMatch';
-import SinglePost from './pages/SinglePostView';
-import SingleEvent from './pages/SingleEventView';
+// import SinglePost from './pages/SinglePostView';
+// import SingleEvent from './pages/SingleEventView';
 import Footer from './components/Footer';
+// import PostForm from './components/PostForm';
 
+const httpLink = createHttpLink({
+    uri: 'http://localhost:3001/graphql',
+});
 
-// import CreatePostButton from './components/CreatePostButton';
-// import Post from './components/Post';
-
-// import Event from './components/Event';
-// import CreateEventButton from './components/CreateEventButton'
-
+const authLink = setContext((_, { headers }) => {
+    const token = localStorage.getItem('id_token');
+    return {
+        headers: {
+            ...headers,
+            authorization: token ? `Bearer ${token}` : '',
+        },
+    };
+});
 const client = new ApolloClient({
-    request: operation => {
-        const token = localStorage.getItem('id_token');
-
-        operation.setContext({
-            headers: {
-                authorization: token ? `Bearer ${token}` : ''
-            }
-        });
-    },
-    uri: '/graphql'
+    link: authLink.concat(httpLink),
+    cache: new InMemoryCache(),
 });
 
 
@@ -53,28 +55,20 @@ function App() {
                         <Home />
                     </Route>
 
-                    <Route path='/signup' exact>
-                        <Suli />
+                    <Route path='/login' exact>
+                        <Login />
                     </Route>
 
-                    <Route path='/login' exact>
-                        <Suli />
-                    </Route>
+                    <Route path='/signup' exact>
+                        <Signup />
+                    </Route>s
 
                     <Route path='/register' exact>
-                        <Suli />
+                        <Signup />
                     </Route>
 
                     <Route path='/iwillsurvive' exact>
-                        <Suli />
-                    </Route>
-
-                    <Route path='/post/:id' exact>
-                        <SinglePost />
-                    </Route>
-
-                    <Route path='/event/:id' exact>
-                        <SingleEvent />
+                        <Signup />
                     </Route>
 
                     <Route component={NoMatch} />
