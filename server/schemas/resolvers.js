@@ -124,7 +124,35 @@ const resolvers = {
       }
     
       throw new AuthenticationError('You need to be logged in!');
-    }
+    },
+    updatePost: async (parent, { postId }, context) => {
+      console.log("update POst ",postInput, postId); 
+      if (context.user) {
+        const updatedPost = await User.findOneAndUpdate(
+          { _id: postId },
+          { $set: { postInput } },
+          { new: true, runValidators: true }
+        );
+    
+        return updatedPost;
+      }
+    
+      throw new AuthenticationError('You need to be logged in!');
+    },
+    updateEvent: async (parent, { eventId }, context) => {
+      console.log("update Event ", eventInput, eventId); 
+      if (context.user) {
+        const updatedEvent = await User.findOneAndUpdate(
+          { _id: eventId },
+          { $set: { eventInput } },
+          { new: true, runValidators: true }
+        );
+    
+        return updatedEvent;
+      }
+    
+      throw new AuthenticationError('You need to be logged in!');
+    },
     
   }
 };
