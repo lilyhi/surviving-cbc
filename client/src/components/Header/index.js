@@ -14,21 +14,22 @@ const Header = () => {
     // };
 
     return (
-        <Navbar fluid class='navbar navbar-collapse' style={{ backgroundColor: 'black' }}>
+        <Navbar fluid class='navbar navbar-collapse' style={{ backgroundColor: 'black', display: 'flex', flexWrap: 'wrap', flexDirection: 'row', justifyContent: 'center', padding: '36px 0' }}>
             <Row>
 
-                <div>
+                <div style={{ display: 'flex', flexWrap: 'wrap', flexDirection: 'row' }}>
                     <h1>
-                        <Link to="/" style={{ textDecoration: 'none', color: '#F75F1C' }}>Surviving CBC</Link>
+                        <Link to="/" style={{ textDecoration: 'none', color: '#F75F1C' }}>Surviving<span style={{ fontSize: '60px', fontWeight: 'bold', color: 'green' }}>+</span>CBC</Link>
                     </h1>
 
-                    <ul>
+                    <ul style={{ display: 'flex', flexWrap: 'wrap', flexDirection: 'row', alignItems: 'center', listStyleType: 'none' }}>
+
                         <li>
-                            <Link to="/signup" style={{ textDecoration: 'none', color: '#F75F1C' }}>Sign Up</Link>
+                            <Link to="/signup" style={{ textDecoration: 'none', color: '#F75F1C', fontSize: '24px', padding: '12px 24px' }}>Sign Up</Link>
                         </li>
 
                         <li>
-                            <Link to="/login" style={{ textDecoration: 'none', color: '#F75F1C' }}>Log In</Link>
+                            <Link to="/login" style={{ textDecoration: 'none', color: '#F75F1C', fontSize: '24px', padding: '12px 24px' }}>Log In</Link>
                         </li>
                     </ul>
                 </div>
