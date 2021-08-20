@@ -22,6 +22,17 @@ function SinglePostView() {
     return (
         <Container padding='0'>
 
+{/* //             <Card>
+//                 <Card.Title>
+//                     <h3>{post.subject}</h3>
+//                     <h4 className='text-right'>{post.username}, {post.createdAt}</h4>
+//                 </Card.Title>
+
+//                 <Card.Body>
+//                     <p>
+//                         {post.postText}
+//                     </p> */}
+
 
             <Card style={{ margin: '0 auto' }}>
                 <Card.Title style={{ padding: '10px' }}>
