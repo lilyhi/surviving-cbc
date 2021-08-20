@@ -1,4 +1,3 @@
-// import all components into the landing page here.
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from "@apollo/client";
@@ -73,6 +72,7 @@ function App() {
 
                     <Route component={NoMatch} />
 
+                   
                 </Switch>
 
                 <Footer />
