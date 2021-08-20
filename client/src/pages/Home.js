@@ -1,6 +1,4 @@
-// When it comes time, integrate Apollo Hooks:
 import { gql, useQuery, useMutation } from '@apollo/client';
-// import { QUERY_THOUGHTS } from '../utils/queries';
 
 import React, { useState } from 'react';
 import SubjectButton from '../components/SubjectButton';
@@ -67,9 +65,8 @@ const Home = () => {
                             <SubjectButton key={subject.key} subject={subject.name} clickEvent={setCurrentSubject} style={{ backgroundColor: 'lightgray' }} />
                         ))}
                     </div>
+
                 </Col>
-
-
 
                 <Col style={{ display: 'flex', flexWrap: 'wrap', flexDirection: 'column', flex: 2, paddingTop: '12px' }}>
                     {/* Creating new PostButton */}
