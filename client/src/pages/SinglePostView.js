@@ -20,7 +20,7 @@ function SinglePostView() {
     }
 
     return (
-        <Container>
+        <Container padding='0'>
 
 {/* //             <Card>
 //                 <Card.Title>
@@ -32,6 +32,7 @@ function SinglePostView() {
 //                     <p>
 //                         {post.postText}
 //                     </p> */}
+
 
             <Card style={{ margin: '0 auto' }}>
                 <Card.Title style={{ padding: '10px' }}>
@@ -45,16 +46,16 @@ function SinglePostView() {
                 </Card.Body>
 
                 <Card.Footer className='text-center'>
-                    <Button style={{ backgroundColor: '#F75F1C', border: 'none', borderRadius: '10px', margin: '0 12px', width: '7REM' }}>
+                    <Button style={{ backgroundColor: '#F75F1C', border: 'none', borderRadius: '10px', margin: '0 12px', width: '5REM', boxShadow: '0 0 10px rgba(0, 0, 0, 1)' }}>
                         Edit
                     </Button>
 
-                    <Button className="btn-danger" style={{ border: 'none', borderRadius: '10px', margin: '0 12px', width: '7REM' }}>
+                    <Button className="btn-danger" style={{ border: 'none', borderRadius: '10px', margin: '0 12px', width: '5REM', boxShadow: '0 0 10px rgba(0, 0, 0, 1)' }}>
                         Delete
                     </Button>
                 </Card.Footer>
             </Card>
-        </Container>
+        </Container >
     )
 }
 

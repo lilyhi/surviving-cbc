@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from "@apollo/client";
 import { setContext } from '@apollo/client/link/context';
-
+import './index.css'
 
 // import ApolloClient from 'apollo-boost';
 // import { ApolloProvider } from '@apollo/react-hooks';
@@ -18,7 +18,7 @@ import Footer from './components/Footer';
 // import PostForm from './components/PostForm';
 
 const httpLink = createHttpLink({
-    uri: 'http://localhost:3001/graphql',
+    uri: '/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -43,6 +43,7 @@ function App() {
         <ApolloProvider client={client} >
 
             <Router>
+
                 <Header />
 
                 <Switch>
@@ -72,7 +73,7 @@ function App() {
 
                     <Route component={NoMatch} />
 
-                   
+
                 </Switch>
 
                 <Footer />
