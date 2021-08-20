@@ -16,7 +16,7 @@ When you land on the page, you can immediately search the subject you need help 
 
 GitHub: 		https://github.com/lilyhi/surviving-cbc
 
-Deployed Link: 	https://surviving-cbc.herokuapp.com/
+Deployed Link: 	https://survivingcbc.herokuapp.com/
 
 
 ## Developers & Collaborators Profile:
