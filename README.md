@@ -1,6 +1,9 @@
 # surviving-cbc
 
 ## Description
+
+
+
 It gets pretty hard learning dozens of languages, programs, and applications during these Coding BootCamps, without really having a strong support system to lean on.
 This MERN stack application is designed to bring all prior, current, and oncoming students together to help out one another, when the help isn't typically there, when you need it. 
 When you land on the page, you can immediately search the subject you need help with, hit enter and it will bring you the most recent posts from previous/current students. The students that graduated tend to post some of their best notes or studying techniques that helped them, when they were in your shoes. In addition to clicking enter on the subject you needed help on, there is a section dedicated to upcoming Events/Study Groups/ meetings (planned by the community). Once you create an account you can start posting what helps best for you and schedule your own events with your new Coding Community.
@@ -10,7 +13,9 @@ When you land on the page, you can immediately search the subject you need help 
 ## Deployed Link
 
 
+GitHub: 		https://github.com/lilyhi/surviving-cbc
 
+Deployed Link: 	https://surviving-cbc.herokuapp.com/
 
 
 ## Developers & Collaborators Profile:
@@ -27,16 +32,12 @@ When you land on the page, you can immediately search the subject you need help 
 * [Questions](#questions)
 * [ProjectRequirements](#ProjectRequirements)
 ## Installation
-
+Npm run develop
 
 ## Usage
 
 ## License
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
-
-
-## Tests
-
 
 ## Questions
 * Email: Please contact me at [Shilohjonezz@gmail.com](mailto:Shilohjonezz@gmail.com) if you have any questions.

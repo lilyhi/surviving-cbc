@@ -22,7 +22,7 @@ function SinglePostView() {
     return (
         <Container>
 
-//             <Card>
+{/* //             <Card>
 //                 <Card.Title>
 //                     <h3>{post.subject}</h3>
 //                     <h4 className='text-right'>{post.username}, {post.createdAt}</h4>
@@ -31,7 +31,7 @@ function SinglePostView() {
 //                 <Card.Body>
 //                     <p>
 //                         {post.postText}
-//                     </p>
+//                     </p> */}
 
             <Card style={{ margin: '0 auto' }}>
                 <Card.Title style={{ padding: '10px' }}>
