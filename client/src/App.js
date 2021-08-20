@@ -18,7 +18,7 @@ import Footer from './components/Footer';
 // import PostForm from './components/PostForm';
 
 const httpLink = createHttpLink({
-    uri: 'http://localhost:3001/graphql',
+    uri: '/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -73,7 +73,7 @@ function App() {
 
                     <Route component={NoMatch} />
 
-                   
+
                 </Switch>
 
                 <Footer />
