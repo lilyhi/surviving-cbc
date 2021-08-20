@@ -32,6 +32,21 @@ const typeDefs = gql`
     user: User
   }
 
+  input postInput {
+    postText: String
+    createdAt: String
+    username: String
+    title: String
+    subject: String
+  }
+
+  input eventInput {
+    eventText: String
+    createdAt: String
+    username: String
+    subject: String
+  }
+
   type Query {
     me: User
     users: [User]
@@ -49,6 +64,8 @@ const typeDefs = gql`
     addEvent(eventText: String!): Event 
     removePost(postId: ID!): Post
     removeEvent(eventId: ID!): Event
+    updatePost(postId: ID!, input: postInput): Post
+    updateEvent(eventId: ID!, input: eventInput): Event
   }
 `;
 
