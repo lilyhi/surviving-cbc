@@ -1,8 +1,9 @@
 # surviving-cbc
 
+![image](https://user-images.githubusercontent.com/76697212/130181514-03592bf2-4f87-4b71-9c03-084cb6c9cdb1.png)
+
+
 ## Description
-
-
 
 It gets pretty hard learning dozens of languages, programs, and applications during these Coding BootCamps, without really having a strong support system to lean on.
 This MERN stack application is designed to bring all prior, current, and oncoming students together to help out one another, when the help isn't typically there, when you need it. 
